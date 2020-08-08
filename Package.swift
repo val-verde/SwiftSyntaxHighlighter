@@ -16,12 +16,9 @@ let package = Package(
                     targets: ["swift-highlight"])
     ],
     dependencies: [
-        .package(name: "SwiftSyntax",
-                 url: "https://github.com/apple/swift-syntax.git",
-                 .revision("0.50300.0")),
-        .package(name: "swift-argument-parser",
-                 url: "https://github.com/apple/swift-argument-parser.git",
-                 .upToNextMinor(from: "0.3.1"))
+        .package(name: "SwiftSyntax", url: "https://github.com/val-verde/swift-syntax.git", .branch("val-verde-mainline")),
+        .package(name: "HTMLEntities", url: "https://github.com/IBM-Swift/swift-html-entities.git", from: "3.0.0"),
+        .package(url: "https://github.com/val-verde/swift-argument-parser.git", .branch("val-verde-mainline")),
     ],
     targets: [
         .target(name: "Highlighter",
